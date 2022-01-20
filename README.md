@@ -5,6 +5,10 @@ Also includes some functions for calculating pupil functions based on [Foreman e
 
 Versions of this code have been used in:
 
+* [Quantification of the NA dependent change of shape in the image formation of a z-polarized fluorescent molecule using vectorial diffraction simulations](https://doi.org/10.1002/jemt.24060).
+Florian Ströhl, Ezra Bruggeman, Christopher J. Rowlands, Deanna L. Wolfson & Balpreet S. Ahluwalia.
+Microscopy Research & Technique (2022).
+
 * [Light-sheet microscopy at high resolution](https://doi.org/10.1038/s41587-021-01101-4).
 Reto Fiolka.
 Nature Biotechnology **39**, 1345–1346 (2021).
