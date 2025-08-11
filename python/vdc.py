@@ -83,9 +83,9 @@ class Pupil:
             x, y = -np.sin(self.phi), np.cos(self.phi)
         elif (polarisation == 'dipole_x'):
             x = np.cos(self.theta) * np.cos(self.phi)**2 + np.sin(self.phi)**2
-            y = (np.cos(self.theta) - 1) * np.sin(self.phi) * np.cos(pupil.phi)
+            y = (np.cos(self.theta) - 1) * np.sin(self.phi) * np.cos(self.pupil.phi)
         elif (polarisation == 'dipole_y'):
-            x = (np.cos(self.theta) - 1) * np.sin(self.phi) * np.cos(pupil.phi)
+            x = (np.cos(self.theta) - 1) * np.sin(self.phi) * np.cos(self.pupil.phi)
             y = np.cos(self.theta) * np.cos(self.phi)**2 + np.sin(self.phi)**2
         elif (polarisation == 'dipole_z'):
             x = np.sin(self.theta) * np.cos(self.phi)
