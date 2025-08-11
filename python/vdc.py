@@ -95,6 +95,6 @@ class Pupil:
         self.pol2 = y * (1 - np.cos(2 * self.phi) * (1 - np.cos(self.theta)) + np.cos(self.theta)) + x * (-1 + np.cos(self.theta)) * np.sin(2 * self.phi)
         self.pol3 = -2 * x * np.cos(self.phi) * np.sin(self.theta) - 2 * y * np.sin(self.phi) * np.sin(self.theta)
 
-        self.ex = self.pol1 * self.stop * self.apo * self.amp * self.phase
-        self.ey = self.pol2 * self.stop * self.apo * self.amp * self.phase
-        self.ez = self.pol3 * self.stop * self.apo * self.amp * self.phase
+        self.ex = self.pol1 * self.stop * self.apo * self.amp * np.exp(1j * self.phase)
+        self.ey = self.pol2 * self.stop * self.apo * self.amp * np.exp(1j * self.phase)
+        self.ez = self.pol3 * self.stop * self.apo * self.amp * np.exp(1j * self.phase)
