@@ -22,7 +22,7 @@ class Pupil:
         self.r = np.sqrt(self.px**2 + self.py**2)
         self.r[self.r > 1] = 0
         self.theta = np.arcsin(sim_params['numerical_aperture'] * self.r / sim_params['refractive_index'])
-        self.phi = np.arctan2(py, px) * 180 / np.pi
+        self.phi = np.arctan2(self.py, self.px) * 180 / np.pi
         self.stop = (np.sqrt(self.px**2 + self.py**2) <= 1)
         self.apo = 1 / np.cos(self.theta)
         self.amp = self.stop.astype(float)
