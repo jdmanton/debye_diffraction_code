@@ -22,7 +22,7 @@ class Pupil:
         self.r = np.sqrt(self.px**2 + self.py**2)
         self.r[self.r > 1] = 0
         self.theta = np.arcsin(sim_params['numerical_aperture'] * self.r / sim_params['refractive_index'])
-        self.phi = np.arctan2(self.py, self.px) * 180 / np.pi
+        self.phi = np.arctan2(self.py, self.px)
         self.stop = (np.sqrt(self.px**2 + self.py**2) <= 1)
         self.apo = 1 / np.cos(self.theta)
         self.amp = self.stop.astype(float)
@@ -83,9 +83,9 @@ class Pupil:
             x, y = -np.sin(self.phi), np.cos(self.phi)
         elif (polarisation == 'dipole_x'):
             x = np.cos(self.theta) * np.cos(self.phi)**2 + np.sin(self.phi)**2
-            y = (np.cos(self.theta) - 1) * np.sin(self.phi) * np.cos(self.pupil.phi)
+            y = (np.cos(self.theta) - 1) * np.sin(self.phi) * np.cos(self.phi)
         elif (polarisation == 'dipole_y'):
-            x = (np.cos(self.theta) - 1) * np.sin(self.phi) * np.cos(self.pupil.phi)
+            x = (np.cos(self.theta) - 1) * np.sin(self.phi) * np.cos(self.phi)
             y = np.cos(self.theta) * np.cos(self.phi)**2 + np.sin(self.phi)**2
         elif (polarisation == 'dipole_z'):
             x = np.sin(self.theta) * np.cos(self.phi)
